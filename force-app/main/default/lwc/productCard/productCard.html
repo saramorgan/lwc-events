@@ -1,0 +1,39 @@
+<template>
+    <lightning-card icon-name="standard:apex_plugin">
+        <template if:true={recordId}>
+            <span slot="title">{productName}</span>
+            <lightning-button-icon
+                icon-name="utility:expand_alt"
+                slot="actions"
+                onclick={handleNavigateToRecord}
+            ></lightning-button-icon>
+            <div class="slds-var-m-horizontal_medium">
+                <lightning-record-view-form
+                    record-id={recordId}
+                    onload={handleRecordLoaded}
+                    object-api-name="Product2"
+                    density="compact"
+                >
+                    <lightning-output-field
+                        field-name={familyField}
+                    ></lightning-output-field>
+                    <lightning-output-field
+                        field-name={productCodeField}
+                    ></lightning-output-field>
+                    <lightning-output-field
+                        field-name={msrpField}
+                    ></lightning-output-field>
+                    <lightning-output-field
+                        field-name={descriptionField}
+                    ></lightning-output-field>
+                </lightning-record-view-form>
+            </div>
+        </template>
+        <template if:false={recordId}>
+            <div class="slds-var-p-around_large">
+                <p class="placeholder">Select a product to see details</p>
+            </div>
+            
+        </template>
+    </lightning-card>
+</template>

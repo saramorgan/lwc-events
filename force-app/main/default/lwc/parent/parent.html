@@ -1,0 +1,34 @@
+<template>
+    <lightning-card 
+        title="Child to Parent Communication" 
+        icon-name="utility:people">
+        <lightning-layout vertical-align="start">
+            <lightning-layout-item padding="around-small" size="6">
+                <div class="slds-box_small">
+                    <b>Event Name:</b>
+                    <lightning-formatted-text 
+                        class="slds-m-left_small" 
+                        value={eventName}>
+                    </lightning-formatted-text>
+                    <div class="slds-box slds-m-around_small">
+                        <c-child 
+                            onclicked={handleButtonClicked}>
+                        </c-child>
+                    </div>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="6">
+                <div class="slds-box_small">
+                    <b>Event Name:</b>
+                    <lightning-formatted-text 
+                        class="slds-m-left_small" 
+                        value={eventName2}>
+                    </lightning-formatted-text>
+                    <div class="slds-box slds-m-around_small">
+                        <c-child2 onclicked2={handleButtonClicked2}></c-child2>
+                    </div>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

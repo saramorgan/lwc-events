@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Complex Child Component">
+        <lightning-layout vertical-align="start">
+            <lightning-layout-item padding="around-small" size="12">
+                <lightning-input 
+                    type="number" 
+                    name="inNumber" 
+                    label="Enter a number:" 
+                    class="slds-m-around_small"
+                    value="1">
+                </lightning-input>
+                <lightning-button 
+                    variant="brand" 
+                    label="Fire Event from Complex Child" 
+                    onclick={handleClick} 
+                    class="slds-m-around_small">
+                </lightning-button> 
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

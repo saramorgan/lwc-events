@@ -1,0 +1,32 @@
+<template>
+    <div class="slds-card slds-var-p-around_x-small">
+        <lightning-input
+            label="Search Key"
+            type="text"
+            onchange={handleSearchKeyChange}
+            class="search-bar"
+        ></lightning-input>
+        <template if:true={products.data}>
+            <template if:true={products.data.length}>
+                <div class="content">
+                    <template for:each={products.data}
+                        for:item="product">
+                        <!-- Product Tile Component goes here-->
+                        <c-product-tile
+                            key={product.Id}
+                            product={product}
+                            onselected={handleProductSelected}
+                            class="slds-var-m-around_x-small">
+                        </c-product-tile>
+                    </template>
+                </div>
+            </template>
+            <template if:false={products.data.length}>
+                <p>There are no products matching your current selection</p>
+            </template>
+        </template>
+        <template if:true={products.error}>
+            <p>An error was encountered trying to get product data</p>
+        </template>
+    </div>
+</template>
