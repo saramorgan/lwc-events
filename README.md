@@ -1,5 +1,5 @@
 # LWC Events
- Code that accompanies the Pluralsight course, Communicate Between Salesforce Lightning Web Components
+ Code that accompanies the Pluralsight course, <a href="https://pluralsight.pxf.io/kj0g30" target="_blank">Communicate Between Salesforce Lightning Web Components</a>
  
 # Installing lwc-events 
 1. Set up your Salesforce DX environment by installing the Salesforce CLI and Visual Studio Code Salesforce extensions.
